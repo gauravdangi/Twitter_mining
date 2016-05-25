@@ -4,10 +4,10 @@ library(twitteR)
 library(tm)
 library(wordcloud)
 #get following details from apps.twitter.com
-API_Key='hbuUzNQy5R5ynnpCI8vf3PH0K'
-API_Secret='pkYesEirOZPIGpEN5n4kOBtyyCVcol04equSattxx7Iaixp5N2'
-Access_Token='466563423-tHBRzZAaDNjfZF1bE7qKMuhKJFxrBls6F7NDdYej'
-Access_Token_Secret='r25LJWoqK3v5gqu9WzcnevQpsqroG9a5y63xAwo1Tseb3'
+API_Key='########################################'
+API_Secret='##################################################'
+Access_Token='##################################################'
+Access_Token_Secret='##################################################'
 setup_twitter_oauth(API_Key,API_Secret,Access_Token,Access_Token_Secret)
 
 #searching for 50 recent tweets which mention the word 'sultan' and 'Salman Khan'
