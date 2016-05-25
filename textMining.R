@@ -1,4 +1,4 @@
-#Extracting data from twitter
+
 library(RCurl)
 library(twitteR)
 library(tm)
@@ -9,7 +9,7 @@ API_Secret='##################################################'
 Access_Token='##################################################'
 Access_Token_Secret='##################################################'
 setup_twitter_oauth(API_Key,API_Secret,Access_Token,Access_Token_Secret)
-
+#Extracting data from twitter
 #searching for 50 recent tweets which mention the word 'sultan' and 'Salman Khan'
 sultan<-searchTwitteR("Sultan+Salman Khan",n=500,lang = 'en',resultType = "recent")
 sultan
