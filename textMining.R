@@ -3,6 +3,7 @@ library(RCurl)
 library(twitteR)
 library(tm)
 library(wordcloud)
+library(SnowballC)
 #get following details from apps.twitter.com
 API_Key='########################################'
 API_Secret='##################################################'
@@ -23,16 +24,17 @@ sultan_c
 sultan_c[[1]]$content
 
 #remove unwanted things
-?tm_map
-?tm_filter
-sultan_clean=tm_map(sultan_c,removePunctuation)
-sultan_clean=tm_map(sultan_c,removeNumbers)
-sultan_clean=tm_map(sultan_c,content_transformer(tolower))
-sultan_clean=tm_map(sultan_c,removeWords,stopwords("english"))
-sultan_clean=tm_map(sultan_c,removeWords,c("https","via","and","httpstco0rusf.."))
-sultan_clean=tm_map(sultan_c,stripWhitespace)
 
+sultan_c <- tm_map(sultan_c,removePunctuation)
+sultan_c <- tm_map(sultan_c,removeNumbers)
+sultan_c <- tm_map(sultan_c,content_transformer(tolower))
+sultan_c <- tm_map(sultan_c,removeWords,stopwords("english"))
+sultan_c <- tm_map(sultan_c,removeWords,c("https","via","and","httpstco0rusf.."))
+sultan_c <- tm_map(sultan_c,stripWhitespace)
+#Now we will perform stemming for better result
+sultan_c <- tm_map(sultan_clean,stemDocument)
 #Using wordcloud for fancy result
-wordcloud(sultan_clean)
-wordcloud(sultan_clean,random.order = F,scale = c(5,0.5))
-wordcloud(sultan_clean,random.order = F,scale = c(5,0.5),colors = rainbow(100))
+wordcloud(sultan_c)
+wordcloud(sultan_c,random.order = F,scale = c(5,0.5))
+wordcloud(sultan_c,min.freq=3random.order = F,scale = c(5,0.5),color=rainbow(50))
+wordcloud(sultan_c,random.order = F,scale = c(5,0.5),colors = rainbow(100))
