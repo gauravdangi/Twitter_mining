@@ -35,5 +35,6 @@ gotC=tm_map(gotC,removeWords,c("httpst..","https","now","how","via","are"))
 gotC=tm_map(gotC,stemDocument)
 
 wordcloud(gotC,min.freq=3,random.order=F,sampe=c(5,0.5))
+wordcloud(gotC,min.freq=3,random.order=F,sampe=c(5,0.5),colors=rainbow(50))
 wordcloud(gotC,min.freq=3,random.order=F,sampe=c(5,0.5),colors = c(3,2,6))
           
