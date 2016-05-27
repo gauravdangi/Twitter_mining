@@ -4,11 +4,7 @@ library(twitteR)
 library(tm)
 library(wordcloud)
 library(SnowballC)
-#get following details from apps.twitter.com
-API_Key='########################################'
-API_Secret='##################################################'
-Access_Token='##################################################'
-Access_Token_Secret='##################################################'
+
 setup_twitter_oauth(API_Key,API_Secret,Access_Token,Access_Token_Secret)
 #Extracting data from twitter
 #searching for 50 recent tweets which mention the word 'sultan' and 'Salman Khan'
