@@ -32,5 +32,5 @@ sultan_c <- tm_map(sultan_clean,stemDocument)
 #Using wordcloud for fancy result
 wordcloud(sultan_c)
 wordcloud(sultan_c,random.order = F,scale = c(5,0.5))
-wordcloud(sultan_c,min.freq=3random.order = F,scale = c(5,0.5),color=rainbow(50))
+wordcloud(sultan_c,min.freq=random.order = F,scale = c(5,0.5),color=rainbow(50))
 wordcloud(sultan_c,random.order = F,scale = c(5,0.5),colors = rainbow(100))
