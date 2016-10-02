@@ -7,3 +7,5 @@ I have also done same for the game of thrones
 
 Packages Used:-
 RCurl,twitteR,tm,wordcloud,SnowballC
+
+# Happy Mining :)
